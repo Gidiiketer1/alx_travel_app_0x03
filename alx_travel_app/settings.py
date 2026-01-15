@@ -9,18 +9,29 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# =========================
+# APPLICATIONS
+# =========================
 INSTALLED_APPS = [
-    'django.contrib.contenttypes',
+    'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Third-party
+    'rest_framework',
     'django_celery_results',
-     'rest_framework',
+
+    # Local apps
     'listings',
 ]
 
 
+# =========================
+# MIDDLEWARE
+# =========================
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -31,9 +42,15 @@ MIDDLEWARE = [
 ]
 
 
+# =========================
+# URL CONFIG
+# =========================
 ROOT_URLCONF = 'alx_travel_app.urls'
 
 
+# =========================
+# DATABASE
+# =========================
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -42,6 +59,9 @@ DATABASES = {
 }
 
 
+# =========================
+# INTERNATIONALIZATION
+# =========================
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -49,6 +69,9 @@ TIME_ZONE = 'UTC'
 USE_TZ = True
 
 
+# =========================
+# STATIC FILES
+# =========================
 STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
